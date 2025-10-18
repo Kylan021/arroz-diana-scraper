@@ -1,4 +1,9 @@
+beautifulsoup4==4.14.2
+bs4==0.0.2
 greenlet==3.2.4
 mysql-connector-python==9.4.0
+playwright==1.55.0
+pyee==13.0.0
+soupsieve==2.8
 SQLAlchemy==2.0.44
 typing_extensions==4.15.0
