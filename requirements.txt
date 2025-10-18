@@ -1,0 +1,4 @@
+greenlet==3.2.4
+mysql-connector-python==9.4.0
+SQLAlchemy==2.0.44
+typing_extensions==4.15.0
