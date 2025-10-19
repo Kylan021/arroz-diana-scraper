@@ -9,7 +9,7 @@ const Historico = (props: Props) => {
     <>
       <Card className="mt-2">
         <Card.Header className="text-center">Historico</Card.Header>
-        <Card.Body>
+        <Card.Body className="overflow-y-scroll" style={{ height: "300px" }}>
           <DataBaselist data={props.dataBase} />
         </Card.Body>
       </Card>

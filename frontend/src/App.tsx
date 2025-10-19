@@ -25,6 +25,48 @@ function App() {
       descuento: -50,
       Disponibilidad: true,
     },
+    {
+      fecha: "2023-10-26 10:00",
+      precioA: 2050,
+      precioO: 3000,
+      descuento: 50,
+      Disponibilidad: true,
+    },
+    {
+      fecha: "2023-10-26 12:00",
+      precioA: 2205,
+      precioO: 2000,
+      descuento: -50,
+      Disponibilidad: true,
+    },
+    {
+      fecha: "2023-10-26 10:00",
+      precioA: 2050,
+      precioO: 3000,
+      descuento: 50,
+      Disponibilidad: true,
+    },
+    {
+      fecha: "2023-10-26 12:00",
+      precioA: 2205,
+      precioO: 2000,
+      descuento: -50,
+      Disponibilidad: true,
+    },
+    {
+      fecha: "2023-10-26 10:00",
+      precioA: 2050,
+      precioO: 3000,
+      descuento: 50,
+      Disponibilidad: true,
+    },
+    {
+      fecha: "2023-10-26 12:00",
+      precioA: 2205,
+      precioO: 2000,
+      descuento: -50,
+      Disponibilidad: true,
+    },
   ];
   return (
     <>
