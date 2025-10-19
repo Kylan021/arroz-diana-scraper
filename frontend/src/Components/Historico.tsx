@@ -6,12 +6,14 @@ interface Props {
 
 const Historico = (props: Props) => {
   return (
-    <Card>
-      <Card.Header className="text-center">Historico</Card.Header>
-      <Card.Body>
-        <DataBaselist data={props.dataBase} />
-      </Card.Body>
-    </Card>
+    <>
+      <Card className="mt-2">
+        <Card.Header className="text-center">Historico</Card.Header>
+        <Card.Body>
+          <DataBaselist data={props.dataBase} />
+        </Card.Body>
+      </Card>
+    </>
   );
 };
 

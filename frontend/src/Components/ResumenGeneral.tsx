@@ -27,10 +27,10 @@ const ResumenGeneral = (props: Props) => {
     <>
       <Row md={12}>
         <Col md={7}>
-          <Card className="h-100">
+          <Card className="h-100 ">
             <Card.Header>informacion del Producto</Card.Header>
             <Card.Body>
-              <Table className="striped bordered responsive hover">
+              <Table className="striped bordered responsive hover h-100">
                 <tbody>
                   <tr className="table-secondary">
                     <th>Producto:</th>
@@ -66,7 +66,7 @@ const ResumenGeneral = (props: Props) => {
           </Card>
         </Col>
         <Col md={5}>
-          <Card>
+          <Card className="mb-1">
             <Card.Header>Resumen Estadístico</Card.Header>
             <Card.Body>
               <Table>
@@ -91,7 +91,7 @@ const ResumenGeneral = (props: Props) => {
               </Table>
             </Card.Body>
           </Card>
-          <Card>
+          <Card className="mt-1">
             <Card.Header>Acciones</Card.Header>
             <Card.Body className="p-3">
               <Stack gap={2} className="col-md-5 mx-auto">

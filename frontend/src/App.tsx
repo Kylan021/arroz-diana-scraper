@@ -32,7 +32,7 @@ function App() {
         <h1>Dashboard dw </h1>
       </div>
 
-      <main className="p-2">
+      <main className="p-2 gap-3">
         <DashboardHead
           precio={2000}
           Descuento={15}
@@ -54,7 +54,7 @@ function App() {
       <footer>
         <div className="row mt-4">
           <div className="col text-center text-muted">
-            <small id="ultima-actualizacion-footer">
+            <small>
               Dashboard web - Monitoreo de Precios | Actualizado: hoy
             </small>
           </div>

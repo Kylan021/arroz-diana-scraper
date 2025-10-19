@@ -13,6 +13,7 @@ interface Props {
 }
 
 const dataBaselist = ({ data }: Props) => {
+  let color = false;
   return (
     <div>
       <Table className="table table-sm table-hover">
@@ -27,7 +28,8 @@ const dataBaselist = ({ data }: Props) => {
         </thead>
         <tbody>
           {data.map((item, index) => (
-            <tr key={index}>
+            <tr key={index} className={color ? "table-secondary" : ""}>
+              {(color = !color)}
               <td>{item.fecha}</td>
               <td>${item.precioA.toLocaleString()}</td>
               <td>${item.precioO.toLocaleString()}</td>
