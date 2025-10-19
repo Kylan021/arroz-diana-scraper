@@ -78,7 +78,7 @@ const ResumenGeneral = (props: Props) => {
                     </td>
                   </tr>
                   <tr>
-                    <th>Precio Maximo:</th>
+                    <th>Precio Máximo:</th>
                     <td className="text-danger">
                       ${precioMax.toLocaleString()}
                     </td>

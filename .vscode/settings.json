@@ -3,6 +3,8 @@
         "Actualizacion",
         "Baselist",
         "Descripcion",
-        "Historico"
+        "Historico",
+        "informacion",
+        "Minimo"
     ]
 }
