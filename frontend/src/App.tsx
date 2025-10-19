@@ -3,6 +3,29 @@ import Historico from "./Components/Historico";
 import ResumenGeneral from "./Components/ResumenGeneral";
 
 function App() {
+  const testData = [
+    {
+      fecha: "2023-10-26 10:00",
+      precioA: "2050",
+      precioO: "3000",
+      descuento: "50",
+      Disponibilidad: true,
+    },
+    {
+      fecha: "2023-10-26 11:00",
+      precioA: "2075",
+      precioO: "3205",
+      descuento: "50",
+      Disponibilidad: false,
+    },
+    {
+      fecha: "2023-10-26 12:00",
+      precioA: "2205",
+      precioO: "2705",
+      descuento: "-50",
+      Disponibilidad: true,
+    },
+  ];
   return (
     <>
       <div className="bg-primary text-white p-4 ">
@@ -26,7 +49,7 @@ function App() {
           precioMin={5564}
           ProductoLink="https://www.google.com/"
         />
-        <Historico />
+        <Historico dataBase={testData} />
       </main>
       <footer>
         <div className="row mt-4">

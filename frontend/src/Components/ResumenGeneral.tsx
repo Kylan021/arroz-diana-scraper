@@ -28,7 +28,7 @@ const ResumenGeneral = (props: Props) => {
       <Row md={12}>
         <Col md={7}>
           <Card className="h-100">
-            <Card.Header>Header Text</Card.Header>
+            <Card.Header>informacion del Producto</Card.Header>
             <Card.Body>
               <Table className="striped bordered responsive hover">
                 <tbody>
