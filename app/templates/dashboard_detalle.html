@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h2>Histórico de Precios - {{ supermercado }}</h2>
+    <p class="text-muted">Evolución del precio del Arroz Diana (500g) en {{ supermercado }} a lo largo del tiempo.</p>
+</div>
+
+<!-- ====== GRÁFICO HISTÓRICO ====== -->
+<div class="card shadow-sm mb-5">
+    <div class="card-header bg-success text-white">
+        <h5 class="mb-0">Evolución del Precio</h5>
+    </div>
+    <div class="card-body">
+        {% if grafico %}
+            {{ grafico|safe }}
+        {% else %}
+            <p class="text-center text-muted mb-0">No hay datos suficientes para generar el gráfico.</p>
+        {% endif %}
+    </div>
+</div>
+
+<!-- ====== TABLA DETALLE ====== -->
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-success text-white">
+        <h5 class="mb-0">Registros Históricos</h5>
+    </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover mb-0">
+                <thead class="table-success text-center">
+                    <tr>
+                        <th>Nombre Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio (COP)</th>
+                        <th>Descuento</th>
+                        <th>Fecha</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    {% for d in datos %}
+                    <tr>
+                        <td>{{ d.nombre_producto }}</td>
+                        <td>{{ d.descripcion[:60] }}{% if d.descripcion|length > 60 %}...{% endif %}</td>
+                        <td><strong>{{ "%.0f"|format(d.precio) }}</strong></td>
+                        <td>{{ "Sí" if d.descuento else "No" }}</td>
+                        <td>{{ d.fecha_scraping.strftime('%Y-%m-%d %H:%M:%S') if d.fecha_scraping }}</td>
+                        <td>
+                            <a href="{{ d.url }}" class="btn btn-outline-primary btn-sm" target="_blank">Ver</a>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr><td colspan="6" class="text-muted">No hay registros disponibles.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a href="{{ url_for('main.dashboard_general') }}" class="btn btn-outline-success">Volver a Dashboards</a>
+    <a href="{{ url_for('main.home') }}" class="btn btn-outline-secondary">Volver al Inicio</a>
+</div>
+{% endblock %}

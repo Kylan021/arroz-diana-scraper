@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h2>Dashboards Generales del Arroz Diana (500g)</h2>
+    <p class="text-muted">Visualización de los precios recolectados desde los principales supermercados.</p>
+</div>
+
+<div class="card shadow-sm mb-5">
+    <div class="card-header bg-success text-white">
+        <h5 class="mb-0">Comparativa Actual de Precios</h5>
+    </div>
+    <div class="card-body">
+        {% if graficos.comparativo %}
+            {{ graficos.comparativo|safe }}
+        {% else %}
+            <p class="text-center text-muted mb-0">No hay datos para mostrar este gráfico.</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="card shadow-sm mb-5">
+    <div class="card-header bg-success text-white">
+        <h5 class="mb-0">Evolución Histórica de Precios</h5>
+    </div>
+    <div class="card-body">
+        {% if graficos.historico %}
+            {{ graficos.historico|safe }}
+        {% else %}
+            <p class="text-center text-muted mb-0">No hay datos históricos suficientes.</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-header bg-success text-white">
+        <h5 class="mb-0">Distribución de Precios Promedio</h5>
+    </div>
+    <div class="card-body">
+        {% if graficos.promedios %}
+            {{ graficos.promedios|safe }}
+        {% else %}
+            <p class="text-center text-muted mb-0">No hay datos de promedios disponibles.</p>
+        {% endif %}
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a href="{{ url_for('main.home') }}" class="btn btn-outline-success">Volver al Inicio</a>
+</div>
+{% endblock %}
