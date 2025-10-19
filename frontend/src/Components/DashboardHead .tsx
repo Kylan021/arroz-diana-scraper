@@ -11,32 +11,32 @@ const Dashboard_head = (props: Props) => {
   const { precio, Descuento, Promedio, Registros } = props;
   return (
     <>
-      <Row className="mb-4">
-        <Col clasName="p-0">
+      <Row className="mb-4 gap-3 me-2 ms-2">
+        <Col className="p-0">
           <Card className="bg-success text-light text-center p-0 shadow h-100">
             <Card.Header className="border-bottom h-50 text-center">
               Precio Actual
             </Card.Header>
-            <Card.Body>{precio}</Card.Body>
+            <Card.Body>${precio.toLocaleString()}</Card.Body>
           </Card>
         </Col>
-        <Col clasName="p-0">
+        <Col className="p-0">
           <Card className="bg-info text-light text-center p-0 shadow h-100">
             <Card.Header className="border-bottom h-50 text-center">
               Descuento
             </Card.Header>
-            <Card.Body>{Descuento}</Card.Body>
+            <Card.Body>{Descuento}%</Card.Body>
           </Card>
         </Col>
-        <Col clasName="p-0">
+        <Col className="p-0">
           <Card className="bg-warning text-light text-center p-0 shadow h-100">
             <Card.Header className="border-bottom h-50 text-center">
               Precio Promedio
             </Card.Header>
-            <Card.Body>{Promedio}</Card.Body>
+            <Card.Body>${Promedio.toLocaleString()}</Card.Body>
           </Card>
         </Col>
-        <Col clasName="p-0">
+        <Col className="p-0">
           <Card className="bg-secondary text-light text-center p-0 shadow border h-100">
             <Card.Header className="border-bottom h-50 text-center">
               Registros
