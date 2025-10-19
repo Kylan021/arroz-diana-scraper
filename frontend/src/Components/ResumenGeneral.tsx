@@ -1,4 +1,4 @@
-import { Card, Row, Col, Table } from "react-bootstrap";
+import { Card, Row, Col, Table, Button, Stack } from "react-bootstrap";
 
 interface Props {
   Producto: string;
@@ -8,6 +8,7 @@ interface Props {
   Actualizacion: string;
   precioMax: number;
   precioMin: number;
+  ProductoLink: string;
 }
 
 const ResumenGeneral = (props: Props) => {
@@ -19,6 +20,7 @@ const ResumenGeneral = (props: Props) => {
     Actualizacion,
     precioMax,
     precioMin,
+    ProductoLink,
   } = props;
 
   return (
@@ -91,7 +93,12 @@ const ResumenGeneral = (props: Props) => {
           </Card>
           <Card>
             <Card.Header>Acciones</Card.Header>
-            <Card.Body></Card.Body>
+            <Card.Body className="p-3">
+              <Stack gap={2} className="col-md-5 mx-auto">
+                <Button href={ProductoLink}>Ver en la web</Button>
+                <Button variant="outline-secondary">Cancel</Button>
+              </Stack>
+            </Card.Body>
           </Card>
         </Col>
       </Row>

@@ -1,4 +1,5 @@
 import DashboardHead from "./Components/DashboardHead ";
+import Historico from "./Components/Historico";
 import ResumenGeneral from "./Components/ResumenGeneral";
 
 function App() {
@@ -23,8 +24,19 @@ function App() {
           Actualizacion="hoy"
           precioMax={15165}
           precioMin={5564}
+          ProductoLink="https://www.google.com/"
         />
+        <Historico />
       </main>
+      <footer>
+        <div className="row mt-4">
+          <div className="col text-center text-muted">
+            <small id="ultima-actualizacion-footer">
+              Dashboard web - Monitoreo de Precios | Actualizado: hoy
+            </small>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
