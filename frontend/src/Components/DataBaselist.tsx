@@ -29,8 +29,8 @@ const dataBaselist = ({ data }: Props) => {
           {data.map((item, index) => (
             <tr key={index}>
               <td>{item.fecha}</td>
-              <td>{item.precioA.toLocaleString()}</td>
-              <td>{item.precioO.toLocaleString()}</td>
+              <td>${item.precioA.toLocaleString()}</td>
+              <td>${item.precioO.toLocaleString()}</td>
               <td>
                 <span
                   className={`badge text-bg-${

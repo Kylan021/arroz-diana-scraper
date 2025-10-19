@@ -6,23 +6,23 @@ function App() {
   const testData = [
     {
       fecha: "2023-10-26 10:00",
-      precioA: "2050",
-      precioO: "3000",
-      descuento: "50",
+      precioA: 2050,
+      precioO: 3000,
+      descuento: 50,
       Disponibilidad: true,
     },
     {
       fecha: "2023-10-26 11:00",
-      precioA: "2075",
-      precioO: "3205",
-      descuento: "50",
+      precioA: 2075,
+      precioO: 3200,
+      descuento: 50,
       Disponibilidad: false,
     },
     {
       fecha: "2023-10-26 12:00",
-      precioA: "2205",
-      precioO: "2705",
-      descuento: "-50",
+      precioA: 2205,
+      precioO: 2000,
+      descuento: -50,
       Disponibilidad: true,
     },
   ];
