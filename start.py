@@ -6,6 +6,7 @@ import os
 # Rutas a los directorios del backend y frontend
 backend_dir = os.path.join(os.path.dirname(__file__), "backend")
 frontend_dir = os.path.join(os.path.dirname(__file__), "frontend")
+pids_file = os.path.join(os.path.dirname(__file__), "pids.txt")
 
 # Comandos para iniciar el backend y el frontend
 backend_command = ["python", "app.py"]
@@ -17,12 +18,12 @@ backend_process = subprocess.Popen(backend_command, cwd=backend_dir)
 
 # Iniciar el frontend
 print("Iniciando el frontend de React...")
-# En Windows, para establecer variables de entorno para npm, se usa set en el mismo comando
-# o se usa $env:PORT=3001; npm start en PowerShell. Aquí usaremos una forma compatible.
-# Para simplificar, asumiremos que npm start preguntará por el puerto si el 3000 está ocupado
-# o que el usuario ya ha configurado el puerto por defecto.
-# Si se necesita un puerto específico, se puede modificar el comando.
 frontend_process = subprocess.Popen(["cmd.exe", "/c", "set PORT=3001 && npm start"], cwd=frontend_dir, shell=True)
+
+# Guardar los PIDs
+with open(pids_file, "w") as f:
+    f.write(str(backend_process.pid) + "\n")
+    f.write(str(frontend_process.pid) + "\n")
 
 # Esperar un tiempo para que los servidores se inicien
 print("Esperando a que los servidores se inicien...")
@@ -43,4 +44,7 @@ except KeyboardInterrupt:
     print("Deteniendo los servidores...")
     backend_process.terminate()
     frontend_process.terminate()
+    # Eliminar el archivo de PIDs al detener los servidores
+    if os.path.exists(pids_file):
+        os.remove(pids_file)
     print("Servidores detenidos.")
