@@ -25,40 +25,41 @@
 
         <main>
 
-        <div class="row mb-4">
-            <div class="col-md-3">
-                <div class="card text-white bg-success">
-                    <div class="card-body">
-                        <h6 class="card-title">Precio Actual</h6>
-                        <h3 id="precio-actual" class="card-text">{{ ultimo.precio_actual if ultimo else 'N/A' }}</h3>
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card text-white bg-success">
+                        <div class="card-body">
+                            <h6 class="card-title">Precio Actual</h6>
+                            <h3 id="precio-actual" class="card-text">{{ ultimo.precio_actual if ultimo else 'N/A' }}
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-info">
+                        <div class="card-body">
+                            <h6 class="card-title">Descuento</h6>
+                            <h3 id="descuento" class="card-text">{{ ultimo.descuento if ultimo else 'N/A' }}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-warning">
+                        <div class="card-body">
+                            <h6 class="card-title">Precio Promedio</h6>
+                            <h3 id="precio-promedio" class="card-text">{{ stats.precio_promedio }}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-secondary">
+                        <div class="card-body">
+                            <h6 class="card-title">Registros</h6>
+                            <h3 id="total-registros" class="card-text">{{ stats.total_registros }}</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-info">
-                    <div class="card-body">
-                        <h6 class="card-title">Descuento</h6>
-                        <h3 id="descuento" class="card-text">{{ ultimo.descuento if ultimo else 'N/A' }}</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-warning">
-                    <div class="card-body">
-                        <h6 class="card-title">Precio Promedio</h6>
-                        <h3 id="precio-promedio" class="card-text">{{ stats.precio_promedio }}</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-secondary">
-                    <div class="card-body">
-                        <h6 class="card-title">Registros</h6>
-                        <h3 id="total-registros" class="card-text">{{ stats.total_registros }}</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
         </main>
 
         <div class="row mb-4">

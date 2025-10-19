@@ -17,7 +17,7 @@ const Dashboard_head = (props: Props) => {
             <Card.Header className="border-bottom h-50 text-center">
               Precio Actual
             </Card.Header>
-            <Card.Body>{precio}</Card.Body>
+            <Card.Body>{precio.toLocaleString()}</Card.Body>
           </Card>
         </Col>
         <Col clasName="p-0">
@@ -33,7 +33,7 @@ const Dashboard_head = (props: Props) => {
             <Card.Header className="border-bottom h-50 text-center">
               Precio Promedio
             </Card.Header>
-            <Card.Body>{Promedio}</Card.Body>
+            <Card.Body>{Promedio.toLocaleString()}</Card.Body>
           </Card>
         </Col>
         <Col clasName="p-0">

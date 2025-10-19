@@ -15,7 +15,15 @@ function App() {
           Promedio={2500}
           Registros={5}
         />
-        <ResumenGeneral />
+        <ResumenGeneral
+          Producto="Arroz diana"
+          Descripcion="pvt0"
+          PrecioOriginal={5000}
+          Disponibilidad
+          Actualizacion="hoy"
+          precioMax={15165}
+          precioMin={5564}
+        />
       </main>
     </>
   );
